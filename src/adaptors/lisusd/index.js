@@ -167,7 +167,8 @@ const getApy = async () => {
             symbol: collateral.symbol,
             underlyingTokens: [collateral.address],
             tvlUsd: Number(tvl) / 1e18,
-            apyBase: 0,
+            apyBase: aprRates || 0,
+            apyReward: aprRates || 0,
             apyBaseBorrow: aprRates || 0,
           };
         } catch (error) {
